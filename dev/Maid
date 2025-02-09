@@ -1,0 +1,88 @@
+--> Creator: Ancestor/CryptedCorner <--
+
+--> Services <--
+local runService: RunService = game:GetService('RunService')
+
+--> Initiate Maid <--
+local Maid: {[any]: any} = {}
+
+--> Properties <--
+Maid.__index = Maid
+Maid.Class = 'Singleton'
+Maid.connections = {}
+Maid.Scope = 'Both'
+
+--> Versions <--
+Maid.Version = "1.0.3"
+Maid.ScriptVersion = "1.0.0"
+Maid.GameVersion = "Unknown"
+
+--> Load singleton <--
+function Maid:new(singleton: (...any) -> ())
+	self.singleton = singleton
+	return setmetatable(self, Maid)
+end
+
+--> Verifies if the connection is valid <--
+function Maid:verify(name: string): boolean
+	return rawget(self.connections, name)
+end
+
+--> for debugging purposes <--
+function Maid:traceback(...: (...any) -> ())
+	if runService:IsStudio() and shared.debugMode then
+		return warn("[MaidService]:", ...)
+	end
+end
+
+--> Registers a new connection to the Maid <--
+function Maid:register(name: string, callback: (...any) -> ()): boolean
+	if self:verify(name) then
+		return self:traceback(string.format("%s is already registered", name))
+	end
+	self.connections[name] = callback
+	local registered = self:verify(name)
+	if registered then
+		self:traceback(string.format("%s was registered", name))
+	end
+	return registered
+end
+
+--> Deregisters a connection from the Maid <--
+function Maid:deregister(name: string)
+	local connection = self:verify(name)
+	if not connection then
+		return self:traceback(string.format("Attempted to deregister a nil or non-existent name: %s", tostring(name)))
+	end
+	if typeof(connection) == 'RBXScriptConnection' then
+		connection:Disconnect()
+	end
+	rawset(self.connections, name, nil)
+	self:traceback(string.format("%s was deregistered", name))
+	return self:verify(name)
+end
+
+--> Clears and removes all registers from the Maid <--
+function Maid:clearRegister(): boolean
+	for connection in next, self.connections do 
+		self:deregister(connection)
+	end
+	return true, self:traceback("register was cleared")
+end
+
+--> Counts the number of active connections <--
+function Maid:countConnections(): number
+	local count = 0
+	for _ in pairs(self.connections) do
+		count += 1
+	end
+	self:traceback(string.format("There are currently %d active connections", count))
+	return count
+end
+
+--> Returns the versions <--
+function Maid:getVersion(): string
+	return string.format("Maid Version: %s\nScript Version: %s\nGame Version: %s", self.Version, self.ScriptVersion, self.GameVersion)
+end
+
+return Maid

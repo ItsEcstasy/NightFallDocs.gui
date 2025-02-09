@@ -1,0 +1,10 @@
+return {
+
+    ["WoodRUs"] = 7
+    ["CarStore"] = 9
+    ["FurnitureStore"] = 8
+    ["ShackShop"] = 10
+    ["LogicStore"] = 12
+    ["FineArt"] = 11
+
+}

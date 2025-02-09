@@ -1,0 +1,5 @@
+return {
+
+    ["Santa"]      = CFrame.new(-65, 159, 545),
+
+}

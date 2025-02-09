@@ -1,0 +1,5 @@
+return {
+    Maid   = "1.0.3",
+    Script = "1.0.0",
+    Game   = "Unknown",
+}

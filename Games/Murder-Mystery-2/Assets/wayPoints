@@ -1,0 +1,8 @@
+return {
+
+    ["Secret Room"]   = CFrame.new(-150, 152, 112),
+    ["Voting Room"]   = CFrame.new(-107, 140, 81),
+    ["Above Spawn"]   = CFrame.new(-82, 507, 27),
+    ["Spawn"]         = CFrame.new(-108, 138, -3),
+
+}

@@ -1,0 +1,18 @@
+return {
+
+    ["Picnic"]             = CFrame.new(82, 5, -29),
+    ["Secret Top of Room"] = CFrame.new(4220, 23, 61),
+    ["Chill Spot"]         = CFrame.new(223, 5, -11),
+    ["Bathroom"]           = CFrame.new(862, 5.7, 267),
+    ["Stage"]              = CFrame.new(27, 7, -70),
+    ["Tent"]               = CFrame.new(71, 5, 24),
+    ["Seat Booths"]        = CFrame.new(26, 7, 86),
+    ["Elevator (Top)"]     = CFrame.new(63, 284, 193),
+    ["Booths"]             = CFrame.new(138, 5, 74),
+    ["Doughnut Shop"]      = CFrame.new(-77, 3, -80),
+    ["Notes Wall"]         = CFrame.new(57, 3, 251),
+    ["Stage 2"]            = CFrame.new(-61, 10, 230),
+    ["Notes Wall"]         = CFrame.new(57, 3, 251),
+    ["Avatar Rate Wall"]   = CFrame.new(-86, -495, -145),
+
+}

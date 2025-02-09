@@ -1,0 +1,28 @@
+return {
+
+    Vector3.new(-40,0,0),
+    Vector3.new(-40,0,-40),
+    Vector3.new(0,0,-40),
+    Vector3.new(40,0,-40),
+    Vector3.new(40,0,0),
+    Vector3.new(40,0,40),
+    Vector3.new(0,0,40),
+    Vector3.new(-40,0,40),
+    Vector3.new(-80,0,40),
+    Vector3.new(-80,0,0),
+    Vector3.new(-80,0,-40),
+    Vector3.new(-80,0,-80),
+    Vector3.new(-40,0,-80),
+    Vector3.new(0,0,-80),
+    Vector3.new(40,0,-80),
+    Vector3.new(80,0,-80),
+    Vector3.new(80,0,-40),
+    Vector3.new(80,0,0),
+    Vector3.new(80,0,40),
+    Vector3.new(80,0,80),
+    Vector3.new(40,0,80),
+    Vector3.new(0,0,80),
+    Vector3.new(-40,0,80),
+    Vector3.new(-80,0,80)
+
+}

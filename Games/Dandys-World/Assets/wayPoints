@@ -1,0 +1,14 @@
+return {
+
+    ["Role-Play"]       = CFrame.new(-48, 17, 123),
+    ["Shop"]            = CFrame.new(1, 20, 21),
+    ["Bobbett's Store"] = CFrame.new(-29, 21, 62),
+    ["Merch-Store"]     = CFrame.new(70, 21, 48),
+    ["Elevator-1"]      = CFrame.new(-49, 23, -93),
+    ["Elevator-2"]      = CFrame.new(14, 23, -154),
+    ["Elevator-3"]      = CFrame.new(75, 23, -92),
+    ["Elevator-3"]      = CFrame.new(75, 23, -92),
+    ["Secret-Room"]      = CFrame.new(-180, 7, 36),
+    ["Top of Map"]      = CFrame.new(21, 152, -96),
+    
+}
